@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ndeye Sokhna SECK - AI Product Manager / AI Engineer </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" xintegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .section-title {
+            border-bottom: 2px solid #D1D5DB; /* gray-300 */
+        }
+        #ai-modal { transition: opacity 0.3s ease; }
+        .modal-content { transition: transform 0.3s ease; }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #4f46e5; /* indigo-600 */
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Language Toggle Switch */
+        .lang-switch { display: flex; align-items: center; }
+        .lang-switch input { display: none; }
+        .lang-switch label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 70px;
+            height: 34px;
+            background: #4A5568; /* gray-700 */
+            border-radius: 17px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color .2s;
+        }
+        .lang-switch label span {
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            width: 50%;
+            text-align: center;
+            z-index: 1;
+        }
+        .lang-switch .slider {
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform .2s;
+        }
+        .lang-switch input:checked + label .slider {
+            transform: translateX(36px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-6 md:p-8">
+    <div id="cv-container" class="max-w-7xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
+        <!-- En-tête -->
+        <header class="bg-gray-800 text-white p-8 sm:p-10 md:p-12 text-center relative">
+            <div class="absolute top-4 right-4 lang-switch">
+                <input type="checkbox" id="lang-toggle">
+                <label for="lang-toggle">
+                    <span>FR</span>
+                    <span>EN</span>
+                    <div class="slider"></div>
+                </label>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Ndeye Sokhna SECK</h1>
+            <p data-lang-key="subtitle" class="mt-4 text-lg sm:text-xl text-gray-300">AI Product Management | IA Générative | IA agentique | Éthique et conformité</p>
+            <div class="mt-6 flex justify-center items-center gap-x-6 gap-y-2 flex-wrap text-sm sm:text-base">
+                <a href="mailto:ndeye-sokhna.seck@outlook.fr" class="flex items-center gap-2 hover:text-indigo-300 transition-colors">
+                    <i class="fas fa-envelope"></i>
+                    <span>ndeye-sokhna.seck@outlook.fr</span>
+                </a>
+                <span class="text-gray-500 hidden sm:inline">|</span>
+                <a href="#" class="flex items-center gap-2 hover:text-indigo-300 transition-colors">
+                    <i class="fas fa-phone"></i>
+                    <span>+33617296390</span>
+                </a>
+                <span class="text-gray-500 hidden sm:inline">|</span>
+                <a href="https://www.linkedin.com/in/soseck" target="_blank" class="flex items-center gap-2 hover:text-indigo-300 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                    <span>in/soseck</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Présentation -->
+        <section class="p-8 sm:p-10 md:p-12 border-b border-gray-200">
+            <h2 data-lang-key="presentation_title" class="text-3xl font-bold text-gray-800 text-center mb-6">Présentation</h2>
+            <p data-lang-key="presentation_text" class="text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+                Al Product Manager Freelance et Consultante expérimentée en Data & IA, avec plus de 4 ans d'expérience à la croisée de la donnée, de l'intelligence artificielle, du Cloud et de l'ingénierie logicielle. J'apporte une expertise unique pour la création de produits IA avec une expérience concrète dans le lancement d'outils basés sur l'intelligence artificielle pour définir et piloter des stratégies produit Al répondant à vos enjeux business et aux besoins utilisateurs. Ma passion pour le design et la mise en œuvre de produits alimentés par l'IA générative se traduit par une volonté de repenser et fluidifier l'expérience utilisateur grâce à des solutions innovantes et éthiques. Je combine une compréhension technique des modèles et du MLOps avec une capacité avérée à collaborer efficacement avec les équipes techniques et métier pour décliner et concrétiser des visions produits Al à fort impact.
+            </p>
+        </section>
+
+        <!-- Section IA : Analyse d'adéquation -->
+        <section id="ai-analysis-section" class="p-8 sm:p-10 md:p-12 border-b border-gray-200 bg-gray-50">
+            <h2 data-lang-key="ai_title" class="text-2xl font-bold text-gray-800 text-center">Analyse d'Adéquation par l'IA ✨</h2>
+            <p data-lang-key="ai_desc" class="text-center text-gray-600 mt-2 max-w-3xl mx-auto">Décrivez votre besoin (mission, poste à pourvoir, compétences recherchées, etc.) et laissez l'IA analyser en quoi ce profil est l'adéquation parfaite pour vous.</p>
+            <div class="mt-6 max-w-xl mx-auto flex flex-col gap-4">
+                <textarea id="need-description-input" rows="5" data-lang-key="ai_placeholder" placeholder="Décrivez ici la mission, le poste, les compétences requises, le contexte du projet..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 transition shadow-sm"></textarea>
+                <button id="analyze-profile-btn" data-lang-key="ai_button" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition flex items-center justify-center">
+                    Analyser l'adéquation du profil
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Contenu principal -->
+        <main class="p-8 sm:p-10 md:p-12" id="cv-content">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Colonne de gauche -->
+                <div class="lg:col-span-1 space-y-10">
+                    <!-- Diplômes et Formations -->
+                    <section>
+                        <h2 data-lang-key="education_title" class="text-2xl font-bold text-gray-800 pb-2 mb-4 section-title">DIPLÔMES ET FORMATIONS</h2>
+                        <div class="space-y-5">
+                            <div>
+                                <h3 data-lang-key="cert1_title" class="font-semibold text-gray-900">Al Agents Fundamentals</h3>
+                                <p data-lang-key="cert1_issuer" class="text-sm text-gray-600">Hugging Face - Avril 2025</p>
+                            </div>
+                            <div>
+                                <h3 data-lang-key="cert2_title" class="font-semibold text-gray-900">Data Engineering Fundamentals</h3>
+                                <p data-lang-key="cert2_issuer" class="text-sm text-gray-600">Coursera - Novembre 2024</p>
+                            </div>
+                            <div>
+                                <h3 data-lang-key="edu1_title" class="font-semibold text-gray-900">Diplôme d'ingénieur en Informatique</h3>
+                                <p data-lang-key="edu1_desc" class="text-sm text-gray-600">Spécialisation en Data Science, Polytech Nice Sophia Antipolis - 2020</p>
+                            </div>
+                             <div>
+                                <h3 data-lang-key="edu2_title" class="font-semibold text-gray-900">Classes Préparatoires MPSI</h3>
+                                <p data-lang-key="edu2_desc" class="text-sm text-gray-600">Mathématiques, Physique, Sciences de l'Ingénieur, ESIGELEC / Collège Sacré Coeur, Dakar - 2017</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Compétences -->
+                    <section>
+                        <h2 data-lang-key="skills_title" class="text-2xl font-bold text-gray-800 pb-2 mb-4 section-title">COMPÉTENCES</h2>
+                         <div class="space-y-4">
+                            <div>
+                                <h3 data-lang-key="skill1_title" class="font-semibold text-gray-900 mb-2">Product Management & Stratégie Al</h3>
+                                <p data-lang-key="skill1_desc" class="text-gray-700 text-sm">Vision et roadmap produit (IA), cycle de vie produits IA, monétisation, étude de marché, Agile (Scrum, Kanban), gestion des incertitudes, éthique et conformité IA.</p>
+                            </div>
+                            <div>
+                                <h3 data-lang-key="skill2_title" class="font-semibold text-gray-900 mb-2">Al / Machine Learning</h3>
+                                 <p data-lang-key="skill2_desc" class="text-gray-700 text-sm">ML (Supervisé, Non-Supervisé), Deep Learning, IA Générative (LLM, RAG, Agents), Frameworks (LangChain, LlamaIndex), Fine-tuning.</p>
+                            </div>
+                            <div>
+                                <h3 data-lang-key="skill3_title" class="font-semibold text-gray-900 mb-2">Data & MLOps</h3>
+                                <p data-lang-key="skill3_desc" class="text-gray-700 text-sm">Pipelines de données, feature engineering, intégration, MLOps, déploiement continu, surveillance, versioning.</p>
+                            </div>
+                             <div>
+                                <h3 data-lang-key="skill4_title" class="font-semibold text-gray-900 mb-2">Cloud & DevOps</h3>
+                                <p data-lang-key="skill4_desc" class="text-gray-700 text-sm">Azure, AWS, GCP, Docker, Kubernetes, CI/CD.</p>
+                            </div>
+                            <div>
+                                <h3 data-lang-key="skill5_title" class="font-semibold text-gray-900 mb-2">Web & UI</h3>
+                                <p data-lang-key="skill5_desc" class="text-gray-700 text-sm">UX/UI, wireframing, prototypage (Figma), frontend (HTML, CSS, JavaScript, React, Angular), outils IA (Replit AI).</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Références -->
+                    <section>
+                         <h2 data-lang-key="references_title" class="text-2xl font-bold text-gray-800 pb-2 mb-4 section-title">RÉFÉRENCES</h2>
+                         <div class="space-y-4">
+                             <div>
+                                <h3 class="font-semibold text-gray-900">Joyce Marazano</h3>
+                                <p data-lang-key="ref1_desc" class="text-sm text-gray-600">Product Owner, Inferensia</p>
+                                <p class="text-sm text-gray-600">joyce.marazano@inferensia.com</p>
+                             </div>
+                              <div>
+                                <h3 class="font-semibold text-gray-900">Mario El Tabach</h3>
+                                <p data-lang-key="ref2_desc" class="text-sm text-gray-600">Chef de projet, CETIM</p>
+                                <p class="text-sm text-gray-600">mario.eltabach@cetim.fr</p>
+                             </div>
+                              <div>
+                                <h3 class="font-semibold text-gray-900">Alexander Veryazov</h3>
+                                <p data-lang-key="ref3_desc" class="text-sm text-gray-600">Principal Engineer, Amadeus</p>
+                                <p class="text-sm text-gray-600">alexander.veryazov@amadeus.com</p>
+                             </div>
+                         </div>
+                         <div id="download-btn-container" class="mt-8">
+                             <button id="download-pdf-btn" class="w-full bg-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition flex items-center justify-center gap-2">
+                                <i class="fas fa-download"></i>
+                                <span data-lang-key="download_button">Télécharger en PDF</span>
+                            </button>
+                         </div>
+                    </section>
+                </div>
+                
+                <!-- Colonne de droite -->
+                <div class="lg:col-span-2 space-y-10">
+                     <!-- Projets -->
+                    <section>
+                        <h2 data-lang-key="projects_title" class="text-2xl font-bold text-gray-800 pb-2 mb-6 section-title">PROJETS</h2>
+                        <div class="space-y-8">
+                             <article class="experience-item">
+                                <h3 data-lang-key="project1_title" class="text-xl font-bold text-indigo-700">Learning Journey</h3>
+                                <p data-lang-key="project1_date" class="text-sm text-gray-500 mb-3">thelearningjourney.app | Mars 2025 - Aujourd'hui</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li data-lang-key="project1_p1">Création et lancement de l'application web pour structurer l'apprentissage avec des parcours et outils alimentés par l'IA.</li>
+                                    <li data-lang-key="project1_p2"><b>Product vision & design:</b> Conceptualisation de la vision produit pour adresser la surcharge informationnelle et déclinaison d'une offre B2B.</li>
+                                    <li data-lang-key="project1_p3"><b>Parcours d'apprentissage personnalisés:</b> Conception d'une fonctionnalité IA générant des parcours sur mesure.</li>
+                                    <li data-lang-key="project1_p4"><b>Journal d'apprentissage & portfolio:</b> Définition d'une fonctionnalité de journalisation pour consolider et partager les acquis.</li>
+                                    <li data-lang-key="project1_p5"><b>Routines de renforcement:</b> Conception d'une fonctionnalité de révision intelligente pour optimiser la rétention.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
+                    
+                    <!-- Expérience -->
+                    <section>
+                        <h2 data-lang-key="experience_title" class="text-2xl font-bold text-gray-800 pb-2 mb-6 section-title">EXPÉRIENCE PROFESSIONNELLE</h2>
+                        <div class="space-y-8 relative border-l-2 border-gray-200 pl-8">
+                            
+                            <article class="experience-item relative">
+                                <div class="absolute -left-[2.3rem] top-1 w-2.5 h-2.5 bg-indigo-600 rounded-full"></div>
+                                <h3 data-lang-key="exp1_title" class="text-xl font-bold text-indigo-700">Consultante Data & IA</h3>
+                                <p data-lang-key="exp1_date" class="text-sm text-gray-500 mb-3">Inferensia | Juillet 2022 - Février 2025, Lyon, France</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li data-lang-key="exp1_p1">Pilotage d'une Discovery produit sur la conformité à l'IA Act pour un outil d'évaluation.</li>
+                                    <li data-lang-key="exp1_p2">Optimisation de la performance d'algorithmes de détection de fraude (-60% temps d'exécution).</li>
+                                    <li data-lang-key="exp1_p3">Rédaction de réponses à appels d'offres (RFP/RFI) pour des services en data et IA agentique.</li>
+                                </ul>
+                            </article>
+                           
+                            <article class="experience-item relative">
+                                <div class="absolute -left-[2.3rem] top-1 w-2.5 h-2.5 bg-indigo-600 rounded-full"></div>
+                                <h3 data-lang-key="exp2_title" class="text-xl font-bold text-indigo-700">Azure Data Engineer</h3>
+                                <p data-lang-key="exp2_date" class="text-sm text-gray-500 mb-3">Relyens (Client Inferensia) | Septembre 2024 - Janvier 2025, Lyon, France</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li data-lang-key="exp2_p1">Conception et déploiement d'une solution de simulation optimisant les perfs de calcul de 83% (ROI de 400%).</li>
+                                    <li data-lang-key="exp2_p2">Interface clé entre équipes métier et technique pour la collecte des spécifications.</li>
+                                </ul>
+                            </article>
+                           
+                             <article class="experience-item relative">
+                                <div class="absolute -left-[2.3rem] top-1 w-2.5 h-2.5 bg-indigo-600 rounded-full"></div>
+                                <h3 data-lang-key="exp3_title" class="text-xl font-bold text-indigo-700">Data Scientist</h3>
+                                <p data-lang-key="exp3_date" class="text-sm text-gray-500 mb-3">Relyens (Client Inferensia) | Septembre 2022 - Mars 2023, Lyon, France</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li data-lang-key="exp3_p1">Développement d'un moteur de recherche QA (Deep Learning) sur documents PDF scannés.</li>
+                                    <li data-lang-key="exp3_p2">Préparation de données multi-sources pour des cas d'usage ML (analyses prédictives, dashboards).</li>
+                                    <li data-lang-key="exp3_p3">Animation d'entretiens pour le recueil des besoins métier.</li>
+                                </ul>
+                            </article>
+                           
+                             <article class="experience-item relative">
+                                <div class="absolute -left-[2.3rem] top-1 w-2.5 h-2.5 bg-indigo-600 rounded-full"></div>
+                                <h3 data-lang-key="exp4_title" class="text-xl font-bold text-indigo-700">Consultante AMOA - Data Scientist</h3>
+                                <p data-lang-key="exp4_date" class="text-sm text-gray-500 mb-3">CETIM | Avril 2021 - Juin 2022, Senlis, France</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li data-lang-key="exp4_p1">Implémentation d'un modèle de détection d'anomalies IoT en temps réel pour l'Edge Computing.</li>
+                                    <li data-lang-key="exp4_p2">Conception des cahiers de charge et des interfaces utilisateurs (Figma, Angular).</li>
+                                    <li data-lang-key="exp4_p3">Définition de l'architecture de pipelines MLOps/DevOps sur Azure (ML Studio, Docker, AKS).</li>
+                                </ul>
+                            </article>
+
+                             <article class="experience-item relative">
+                                <div class="absolute -left-[2.3rem] top-1 w-2.5 h-2.5 bg-indigo-600 rounded-full"></div>
+                                <h3 data-lang-key="exp5_title" class="text-xl font-bold text-indigo-700">Apprentie Data Scientist</h3>
+                                <p data-lang-key="exp5_date" class="text-sm text-gray-500 mb-3">Amadeus | Septembre 2019 - Septembre 2020, Nice, France</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                    <li data-lang-key="exp5_p1">Développement d'un modèle ML pour la détection automatique d'anomalies.</li>
+                                    <li data-lang-key="exp5_p2">Visualisation de KPIs (Grafana) pour la prise de décision.</li>
+                                    <li data-lang-key="exp5_p3">Implémentation fullstack de l'application web d'alerte.</li>
+                                    <li data-lang-key="exp5_p4">Scrum Master de l'équipe et pilotage du projet en mode Agile.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for AI content -->
+    <div id="ai-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div id="modal-content-area" class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" data-lang-key="modal_title" class="text-xl font-bold text-gray-800">Réponse de l'IA</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-gray-700">&times;</button>
+            </div>
+            <div id="modal-body" class="p-6 overflow-y-auto">
+                <div id="modal-spinner" class="flex justify-center items-center h-48"><div class="spinner"></div></div>
+                <div id="ai-generated-content" class="text-gray-700 leading-relaxed whitespace-pre-wrap" style="font-family: 'Inter', sans-serif;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Store all translations in a single object
+        const translations = {
+            fr: {
+                subtitle: "AI Product Management | IA Générative | IA agentique | Éthique et conformité",
+                presentation_title: "Présentation",
+                presentation_text: `Al Product Manager Freelance et Consultante expérimentée en Data & IA, avec plus de 4 ans d'expérience à la croisée de la donnée, de l'intelligence artificielle, du Cloud et de l'ingénierie logicielle. J'apporte une expertise unique pour la création de produits IA avec une expérience concrète dans le lancement d'outils basés sur l'intelligence artificielle pour définir et piloter des stratégies produit Al répondant à vos enjeux business et aux besoins utilisateurs. Ma passion pour le design et la mise en œuvre de produits alimentés par l'IA générative se traduit par une volonté de repenser et fluidifier l'expérience utilisateur grâce à des solutions innovantes et éthiques. Je combine une compréhension technique des modèles et du MLOps avec une capacité avérée à collaborer efficacement avec les équipes techniques et métier pour décliner et concrétiser des visions produits Al à fort impact.`,
+                ai_title: "Analyse d'Adéquation par l'IA ✨",
+                ai_desc: "Décrivez votre besoin (mission, poste à pourvoir, compétences recherchées, etc.) et laissez l'IA analyser en quoi ce profil est l'adéquation parfaite pour vous.",
+                ai_placeholder: "Décrivez ici la mission, le poste, les compétences requises, le contexte du projet...",
+                ai_button: "Analyser l'adéquation du profil",
+                education_title: "DIPLÔMES ET FORMATIONS",
+                cert1_title: "Al Agents Fundamentals",
+                cert1_issuer: "Hugging Face - Avril 2025",
+                cert2_title: "Data Engineering Fundamentals",
+                cert2_issuer: "Coursera - Novembre 2024",
+                edu1_title: "Diplôme d'ingénieur en Informatique",
+                edu1_desc: "Spécialisation en Data Science, Polytech Nice Sophia Antipolis - 2020",
+                edu2_title: "Classes Préparatoires MPSI",
+                edu2_desc: "Mathématiques, Physique, Sciences de l'Ingénieur, ESIGELEC / Collège Sacré Coeur, Dakar - 2017",
+                skills_title: "COMPÉTENCES",
+                skill1_title: "Product Management & Stratégie Al",
+                skill1_desc: "Vision et roadmap produit (IA), cycle de vie produits IA, monétisation, étude de marché, Agile (Scrum, Kanban), gestion des incertitudes, éthique et conformité IA.",
+                skill2_title: "Al / Machine Learning",
+                skill2_desc: "ML (Supervisé, Non-Supervisé), Deep Learning, IA Générative (LLM, RAG, Agents), Frameworks (LangChain, LlamaIndex), Fine-tuning.",
+                skill3_title: "Data & MLOps",
+                skill3_desc: "Pipelines de données, feature engineering, intégration, MLOps, déploiement continu, surveillance, versioning.",
+                skill4_title: "Cloud & DevOps",
+                skill4_desc: "Azure, AWS, GCP, Docker, Kubernetes, CI/CD.",
+                skill5_title: "Web & UI",
+                skill5_desc: "UX/UI, wireframing, prototypage (Figma), frontend (HTML, CSS, JavaScript, React, Angular), outils IA (Replit AI).",
+                references_title: "RÉFÉRENCES",
+                ref1_desc: "Product Owner, Inferensia",
+                ref2_desc: "Chef de projet, CETIM",
+                ref3_desc: "Principal Engineer, Amadeus",
+                download_button: "Télécharger en PDF",
+                projects_title: "PROJETS",
+                project1_title: "Learning Journey",
+                project1_date: "thelearningjourney.app | Mars 2025 - Aujourd'hui",
+                project1_p1: "Création et lancement de l'application web pour structurer l'apprentissage avec des parcours et outils alimentés par l'IA.",
+                project1_p2: "<b>Product vision & design:</b> Conceptualisation de la vision produit pour adresser la surcharge informationnelle et déclinaison d'une offre B2B.",
+                project1_p3: "<b>Parcours d'apprentissage personnalisés:</b> Conception d'une fonctionnalité IA générant des parcours sur mesure.",
+                project1_p4: "<b>Journal d'apprentissage & portfolio:</b> Définition d'une fonctionnalité de journalisation pour consolider et partager les acquis.",
+                project1_p5: "<b>Routines de renforcement:</b> Conception d'une fonctionnalité de révision intelligente pour optimiser la rétention.",
+                experience_title: "EXPÉRIENCE PROFESSIONNELLE",
+                exp1_title: "Consultante Data & IA",
+                exp1_date: "Inferensia | Juillet 2022 - Février 2025, Lyon, France",
+                exp1_p1: "Pilotage d'une Discovery produit sur la conformité à l'IA Act pour un outil d'évaluation.",
+                exp1_p2: "Optimisation de la performance d'algorithmes de détection de fraude (-60% temps d'exécution).",
+                exp1_p3: "Rédaction de réponses à appels d'offres (RFP/RFI) pour des services en data et IA agentique.",
+                exp2_title: "Azure Data Engineer",
+                exp2_date: "Relyens (Client Inferensia) | Septembre 2024 - Janvier 2025, Lyon, France",
+                exp2_p1: "Conception et déploiement d'une solution de simulation optimisant les perfs de calcul de 83% (ROI de 400%).",
+                exp2_p2: "Interface clé entre équipes métier et technique pour la collecte des spécifications.",
+                exp3_title: "Data Scientist",
+                exp3_date: "Relyens (Client Inferensia) | Septembre 2022 - Mars 2023, Lyon, France",
+                exp3_p1: "Développement d'un moteur de recherche QA (Deep Learning) sur documents PDF scannés.",
+                exp3_p2: "Préparation de données multi-sources pour des cas d'usage ML (analyses prédictives, dashboards).",
+                exp3_p3: "Animation d'entretiens pour le recueil des besoins métier.",
+                exp4_title: "Consultante AMOA - Data Scientist",
+                exp4_date: "CETIM | Avril 2021 - Juin 2022, Senlis, France",
+                exp4_p1: "Implémentation d'un modèle de détection d'anomalies IoT en temps réel pour l'Edge Computing.",
+                exp4_p2: "Conception des cahiers de charge et des interfaces utilisateurs (Figma, Angular).",
+                exp4_p3: "Définition de l'architecture de pipelines MLOps/DevOps sur Azure (ML Studio, Docker, AKS).",
+                exp5_title: "Apprentie Data Scientist",
+                exp5_date: "Amadeus | Septembre 2019 - Septembre 2020, Nice, France",
+                exp5_p1: "Développement d'un modèle ML pour la détection automatique d'anomalies.",
+                exp5_p2: "Visualisation de KPIs (Grafana) pour la prise de décision.",
+                exp5_p3: "Implémentation fullstack de l'application web d'alerte.",
+                exp5_p4: "Scrum Master de l'équipe et pilotage du projet en mode Agile.",
+                modal_title: "Réponse de l'IA",
+                ai_prompt: `En tant qu'expert en recrutement pour des postes de haut niveau en Tech et IA, analyse la description de besoin suivante et compare-la point par point avec le CV de Ndeye Sokhna SECK.
+
+**Principes Directeurs (Guardrails) OBLIGATOIRES :**
+1.  **Objectivité et Honnêteté :** Ton analyse doit être équilibrée. Mets en avant les forces mais identifie aussi honnêtement les points où le CV ne répond pas explicitement à une demande.
+2.  **Basé sur les Faits :** Base-toi EXCLUSIVEMENT sur le contenu du CV fourni. N'invente et ne déduis aucune compétence ou expérience qui n'est pas explicitement mentionnée.
+3.  **Professionnalisme :** Le ton doit rester formel, constructif et non promotionnel à l'excès.
+
+**Objectif :** Produire une analyse nuancée pour aider le recruteur à prendre une décision éclairée.
+
+**Instructions de Formatage :**
+1.  **Points d'Adéquation :** Crée une section "✅ Points d'adéquation forte". Pour chaque compétence ou expérience requise dans le besoin qui est clairement couverte par le CV, liste-la et justifie avec un exemple précis du CV (projet, entreprise, compétence listée).
+    * *Exemple :* "**Compétence en IA Générative :** Adéquation confirmée. Ndeye démontre une expertise directe via son projet 'Learning Journey' qui utilise des outils alimentés par l'IA et sa maîtrise des 'LLM, Prompt Engineering, RAG, Agents'."
+
+2.  **Points à Approfondir :** Crée une section "⚠️ Points à approfondir en entretien". Si le besoin mentionne une compétence, une technologie spécifique ou un type d'expérience qui n'est PAS explicitement mentionné dans le CV, liste-le ici. NE le présente PAS comme un point faible. Formule-le comme une question ouverte suggérant une discussion.
+    * *Exemple :* "**Expérience en [Technologie Spécifique non listée] :** Le CV ne mentionne pas d'expérience directe avec [Technologie Spécifique]. C'est un point qui mériterait d'être discuté avec Ndeye Sokhna pour comprendre son niveau de familiarité avec cet environnement ou des technologies similaires."
+
+3.  **Synthèse :** Conclus avec une synthèse objective et équilibrée. Résume les points forts principaux et rappelle les quelques points à clarifier pour une évaluation complète.
+
+--- DESCRIPTION DU BESOIN FOURNIE PAR LE VISITEUR ---
+{NEED_DESCRIPTION}
+--- FIN DE LA DESCRIPTION ---
+
+--- CV DE NDEYE SOKHNA SECK ---
+{CV_TEXT}
+--- FIN DU CV ---`
+            },
+            en: {
+                subtitle: "AI Product Management | Generative AI | Agentic AI | Ethics and Compliance",
+                presentation_title: "Profile",
+                presentation_text: `Freelance AI Product Manager and experienced Data & AI Consultant with over 4 years of experience at the intersection of data, artificial intelligence, Cloud, and software engineering. I bring unique expertise in creating AI products, with concrete experience in launching AI-based tools to define and drive product strategies that meet business challenges and user needs. My passion for designing and implementing products powered by generative AI translates into a drive to rethink and streamline the user experience through innovative and ethical solutions. I combine a technical understanding of models and MLOps with a proven ability to collaborate effectively with technical and business teams to develop and implement high-impact AI product visions.`,
+                ai_title: "AI-Powered Profile Analysis ✨",
+                ai_desc: "Describe your needs (mission, job opening, required skills, etc.) and let the AI analyze why this profile is the perfect match for you.",
+                ai_placeholder: "Describe the mission, job, required skills, project context here...",
+                ai_button: "Analyze Profile Match",
+                education_title: "EDUCATION & CERTIFICATIONS",
+                cert1_title: "AI Agents Fundamentals",
+                cert1_issuer: "Hugging Face - April 2025",
+                cert2_title: "Data Engineering Fundamentals",
+                cert2_issuer: "Coursera - November 2024",
+                edu1_title: "Engineering Degree in Computer Science",
+                edu1_desc: "Data Science Specialization, Polytech Nice Sophia Antipolis, France - 2020",
+                edu2_title: "Preparatory Classes MPSI",
+                edu2_desc: "Mathematics, Physics, Engineering Sciences, ESIGELEC / Collège Sacré Coeur, Dakar, Senegal - 2017",
+                skills_title: "SKILLS",
+                skill1_title: "Product Management & AI Strategy",
+                skill1_desc: "AI product vision & roadmap, AI product lifecycle management, monetization & adoption strategy, market research, user needs analysis, Agile (Scrum, Kanban), managing AI uncertainty in product design, AI ethics & compliance.",
+                skill2_title: "AI / Machine Learning",
+                skill2_desc: "Supervised & Unsupervised Machine Learning, Deep Learning, Generative AI (LLM, Prompt Engineering, RAG, Agents). Agent development frameworks (Agno, CrewAI, LangChain, LlamaIndex), Agentic protocols, model evaluation, and fine-tuning.",
+                skill3_title: "Data & MLOps",
+                skill3_desc: "Data pipeline design, feature engineering, data integration, and MLOps for continuous deployment, monitoring, and versioning of models.",
+                skill4_title: "Cloud & DevOps",
+                skill4_desc: "Cloud platforms (Azure, AWS, GCP), containerization (Docker), orchestration (Kubernetes), and CI/CD.",
+                skill5_title: "Web & UI",
+                skill5_desc: "AI-powered tools (e.g., Replit AI, Bolt, Lovable) for rapid prototyping and UX exploration. UX/UI design, wireframing, prototyping (Figma), and frontend development (HTML, CSS, JavaScript, React, Angular).",
+                references_title: "REFERENCES",
+                ref1_desc: "Product Owner, Inferensia",
+                ref2_desc: "Project Manager, CETIM",
+                ref3_desc: "Principal Engineer, Amadeus",
+                download_button: "Download as PDF",
+                projects_title: "PROJECTS",
+                project1_title: "Learning Journey",
+                project1_date: "thelearningjourney.app | March 2025 - Present",
+                project1_p1: "Created and launched the Learning Journey web application, which helps learners structure their experience and achieve learning goals through AI-powered paths, coaching, and tools based on high-quality, curated web content.",
+                project1_p2: "<b>Product Vision & Design:</b> Conceptualized and drove the product vision for Learning Journey to address information overload and lack of structure in self-directed learning. Developed a B2B offering to support companies in sharing and assimilating internal knowledge and processes.",
+                project1_p3: "<b>\"Roadmaps\" Personalized Learning Paths:</b> Designed a key AI feature that generates custom, step-by-step learning paths based on user constraints, goals, and assessments for maximum personalization.",
+                project1_p4: "<b>\"Relive\" Learning Journal & Shareable Portfolio:</b> Defined a journaling and personal portfolio feature, allowing users to consolidate their thoughts and work, track their progress, and publicly share their structured paths to showcase their mastery.",
+                project1_p5: "<b>\"Routines\" AI-Driven Learning Reinforcement:</b> Designed an intelligent review feature using AI and automated workflows to periodically suggest new resources, practice sessions, and concepts to reinforce, optimizing long-term retention.",
+                experience_title: "EXPERIENCE",
+                exp1_title: "Data & AI Consultant",
+                exp1_date: "Inferensia | July 2022 - February 2025, Lyon, France",
+                exp1_p1: "Led a product discovery process on AI Act compliance, defining requirements for an AI tool to assess the compliance of corporate AI models with new regulations and provide actionable conclusions.",
+                exp1_p2: "Implemented performance optimization for accounting fraud detection algorithms, achieving a 60% reduction in execution time for a suite of Spark algorithms.",
+                exp1_p3: "Wrote and submitted responses to calls for proposals (RFP/RFI) for consulting services in data and agentic AI.",
+                exp2_title: "Azure Data Engineer",
+                exp2_date: "Relyens (Inferensia Client) | Sept. 2024 - January 2025, Lyon, France",
+                exp2_p1: "Designed and deployed a calculation simulation solution for business optimization. Re-implemented a simulation algorithm in Databricks on Azure Data Factory, resulting in an 83% improvement in calculation performance and a 400% ROI over 5 years on execution costs.",
+                exp2_p2: "Acted as a key interface between business and technical teams for gathering and translating functional and non-functional specifications.",
+                exp3_title: "Data Scientist",
+                exp3_date: "Relyens (Inferensia Client) | September 2022 - March 2023, Lyon, France",
+                exp3_p1: "Developed a Deep Learning-based search and Question-Answering engine for scanned PDF documents, designing and fine-tuning models (PyTorch).",
+                exp3_p2: "Prepared data for ML use cases by collecting, processing, and feature-engineering multi-source data (PDF, images, APIs, SGBD, Open Data).",
+                exp3_p3: "Led interviews with business teams to understand needs and gather data for implementing solutions.",
+                exp4_title: "Business Analyst - Data Scientist",
+                exp4_date: "CETIM | April 2021 - June 2022, Senlis, France",
+                exp4_p1: "Implemented a real-time anomaly detection model (One-Class SVM) on IoT data for Edge Computing, directly impacting predictive maintenance and system reliability.",
+                exp4_p2: "Designed technical specifications, user interfaces (Figma, Angular), and data ingestion points by gathering requirements from business teams.",
+                exp4_p3: "Defined the architecture for MLOps and DevOps pipelines on Azure (Azure ML Studio, Docker, AKS).",
+                exp5_title: "Data Scientist Apprentice",
+                exp5_date: "Amadeus | September 2019 - September 2020, Nice, France",
+                exp5_p1: "Developed and implemented a Machine Learning model (Python, Scikit-learn) for automatic anomaly detection.",
+                exp5_p2: "Visualized KPIs using Grafana to help business teams interpret performance and identify trends.",
+                exp5_p3: "Implemented the full-stack B2E web application for real-time anomaly alerting and visualization.",
+                exp5_p4: "Served as Scrum Master for the development team, managing the project in an Agile environment.",
+                modal_title: "AI Response",
+                ai_prompt: `As a top-tier Tech and AI recruiter, analyze the following needs description and compare it point-by-point with Ndeye Sokhna SECK's resume.
+
+**MANDATORY Guiding Principles (Guardrails):**
+1.  **Objectivity and Honesty:** Your analysis must be balanced. Highlight strengths but also honestly identify where the resume does not explicitly meet a request.
+2.  **Fact-Based:** Rely EXCLUSIVELY on the content of the provided resume. Do not invent or infer any skills or experiences not explicitly mentioned.
+3.  **Professionalism:** The tone must remain formal, constructive, and not overly promotional.
+
+**Objective:** Produce a nuanced analysis to help the recruiter make an informed decision.
+
+**Formatting Instructions:**
+1.  **Strong Match Points:** Create a section "✅ Strong Match Points". For each required skill or experience in the needs description that is clearly covered by the resume, list it and justify with a specific example from the resume (project, company, listed skill).
+    * *Example:* "**Required Skill [Skill Name]:** Confirmed match. Ndeye demonstrates this skill in her project [Project Name] where she [specific action]."
+
+2.  **Points to Deepen in an Interview:** Create a section "⚠️ Points to Deepen in an Interview". If the need mentions a skill, specific technology, or type of experience that is NOT explicitly mentioned in the resume, list it here. DO NOT present it as a weakness. Frame it as an open question suggesting a discussion.
+    * *Example:* "**Experience with [Specific Unlisted Technology]:** The resume does not mention direct experience with [Specific Technology]. This would be a good point to discuss with Ndeye Sokhna to understand her familiarity with this environment or similar technologies."
+
+3.  **Synthesis:** Conclude with an objective and balanced summary. Summarize the main strengths and reiterate the few points to be clarified for a complete evaluation.
+
+--- VISITOR'S NEEDS DESCRIPTION ---
+{NEED_DESCRIPTION}
+--- END OF DESCRIPTION ---
+
+--- NDEYE SOKHNA SECK'S RESUME ---
+{CV_TEXT}
+--- END OF RESUME ---`
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const langToggle = document.getElementById('lang-toggle');
+            let currentLang = localStorage.getItem('lang') || 'fr';
+
+            const switchLanguage = (lang) => {
+                document.documentElement.lang = lang;
+                langToggle.checked = (lang === 'en');
+                
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.getAttribute('data-lang-key');
+                    if (translations[lang][key]) {
+                        // Use innerHTML for keys that might contain bold tags
+                        if (key.includes('_p2') || key.includes('_p3') || key.includes('_p4') || key.includes('_p5')) {
+                             element.innerHTML = translations[lang][key];
+                        } else {
+                             element.innerText = translations[lang][key];
+                        }
+                    }
+                });
+
+                // Update placeholder for textarea
+                const textarea = document.getElementById('need-description-input');
+                if (textarea) {
+                    textarea.placeholder = translations[lang]['ai_placeholder'];
+                }
+
+                localStorage.setItem('lang', lang);
+                currentLang = lang;
+            };
+
+            langToggle.addEventListener('change', (event) => {
+                const newLang = event.target.checked ? 'en' : 'fr';
+                switchLanguage(newLang);
+            });
+            
+            // Set initial language on page load
+            switchLanguage(currentLang);
+
+
+            // --- Rest of the existing script ---
+            const modal = document.getElementById('ai-modal');
+            const modalContentArea = document.getElementById('modal-content-area');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalTitle = document.getElementById('modal-title');
+            const aiGeneratedContent = document.getElementById('ai-generated-content');
+            const modalSpinner = document.getElementById('modal-spinner');
+
+            const analyzeProfileBtn = document.getElementById('analyze-profile-btn');
+            const needDescriptionInput = document.getElementById('need-description-input');
+            const downloadPdfBtn = document.getElementById('download-pdf-btn');
+            
+            const API_URL = `https://cv-proxy-backend.vercel.app/api/proxy-deepseek`;
+
+            const showModal = () => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContentArea.classList.remove('scale-95');
+                modalContentArea.classList.add('scale-100');
+            };
+
+            const hideModal = () => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContentArea.classList.add('scale-95');
+                modalContentArea.classList.remove('scale-100');
+            };
+
+            closeModalBtn.addEventListener('click', hideModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) hideModal();
+            });
+
+            async function callAI(prompt) {
+                aiGeneratedContent.innerHTML = '';
+                modalSpinner.style.display = 'flex';
+
+                try {
+                    const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ prompt: prompt })
+                    });
+
+                    if (!response.ok) throw new Error(`API error: ${response.statusText}`);
+
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates[0]?.content?.parts?.[0]) {
+                        return result.candidates[0].content.parts[0].text;
+                    } else {
+                        console.error("Unexpected API response structure:", result);
+                        if (result.promptFeedback?.blockReason) {
+                             return `Le contenu n'a pas pu être généré. Raison: ${result.promptFeedback.blockReason}.`;
+                        }
+                        return "Désolé, une erreur est survenue lors de la communication avec l'IA.";
+                    }
+                } catch (error) {
+                    console.error('Error calling Gemini API:', error);
+                    return `Une erreur technique est survenue: ${error.message}.`;
+                } finally {
+                    modalSpinner.style.display = 'none';
+                }
+            }
+
+            analyzeProfileBtn.addEventListener('click', async () => {
+                const needDescription = needDescriptionInput.value.trim();
+                if (!needDescription) {
+                    alert(currentLang === 'fr' ? 'Veuillez décrire votre besoin.' : 'Please describe your needs.');
+                    return;
+                }
+
+                modalTitle.textContent = translations[currentLang]['modal_title'];
+                showModal();
+                
+                let cvText = '';
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                   cvText += el.innerText + '\n';
+                });
+                
+                let promptTemplate = translations[currentLang]['ai_prompt'];
+                const finalPrompt = promptTemplate.replace('{NEED_DESCRIPTION}', needDescription).replace('{CV_TEXT}', cvText);
+                
+                const result = await callAI(finalPrompt);
+                aiGeneratedContent.textContent = result;
+            });
+
+            downloadPdfBtn.addEventListener('click', () => {
+                const element = document.getElementById('cv-container');
+                const elementToPrint = element.cloneNode(true);
+
+                elementToPrint.querySelector('#ai-analysis-section')?.remove();
+                elementToPrint.querySelector('#download-btn-container')?.remove();
+                elementToPrint.querySelector('.lang-switch')?.remove();
+
+                const filename = currentLang === 'fr' ? 'CV_Ndeye_Sokhna_SECK_FR.pdf' : 'CV_Ndeye_Sokhna_SECK_EN.pdf';
+
+                const opt = {
+                    margin: 0.2,
+                    filename: filename,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true },
+                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+                };
+                
+                html2pdf().from(elementToPrint).set(opt).save();
+            });
+        });
+    </script>
+</body>
+</html>
