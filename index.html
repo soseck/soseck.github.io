@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ndeye Sokhna SECK - AI Product Manager / AI Engineer </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" xintegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -576,29 +575,28 @@
                 modalSpinner.style.display = 'flex';
 
                 try {
-                    const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
                     const response = await fetch(API_URL, {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
                         body: JSON.stringify({ prompt: prompt })
                     });
 
-                    if (!response.ok) throw new Error(`API error: ${response.statusText}`);
-
                     const result = await response.json();
-                    
-                    if (result.candidates && result.candidates[0]?.content?.parts?.[0]) {
-                        return result.candidates[0].content.parts[0].text;
-                    } else {
-                        console.error("Unexpected API response structure:", result);
-                        if (result.promptFeedback?.blockReason) {
-                             return `Le contenu n'a pas pu être généré. Raison: ${result.promptFeedback.blockReason}.`;
-                        }
-                        return "Désolé, une erreur est survenue lors de la communication avec l'IA.";
+
+                    // Si la réponse du proxy n'est pas OK (status 4xx ou 5xx), on lève une erreur
+                    if (!response.ok) {
+                        // result.error contiendra le message d'erreur renvoyé par le proxy
+                        throw new Error(result.error || 'Une erreur inconnue est survenue depuis le proxy.');
                     }
+
+                    // La réponse est OK, on retourne directement le texte.
+                    return result.text;
+
                 } catch (error) {
-                    console.error('Error calling Gemini API:', error);
-                    return `Une erreur technique est survenue: ${error.message}.`;
+                    console.error('Erreur lors de l\'appel à l\'IA via le proxy:', error);
+                    return `Une erreur technique est survenue: ${error.message}`;
                 } finally {
                     modalSpinner.style.display = 'none';
                 }
@@ -627,24 +625,17 @@
             });
 
             downloadPdfBtn.addEventListener('click', () => {
-                const element = document.getElementById('cv-container');
-                const elementToPrint = element.cloneNode(true);
-
-                elementToPrint.querySelector('#ai-analysis-section')?.remove();
-                elementToPrint.querySelector('#download-btn-container')?.remove();
-                elementToPrint.querySelector('.lang-switch')?.remove();
-
-                const filename = currentLang === 'fr' ? 'CV_Ndeye_Sokhna_SECK_FR.pdf' : 'CV_Ndeye_Sokhna_SECK_EN.pdf';
-
-                const opt = {
-                    margin: 0.2,
-                    filename: filename,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2, useCORS: true },
-                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-                };
+                const pdfPath = currentLang === 'fr' 
+                    ? 'cv/FR - Ndeye Sokhna SECK - AI Product Manager _ AI Engineer.pdf'
+                    : 'cv/EN - Ndeye Sokhna SECK - AI Product Manager _ AI Engineer.pdf';
                 
-                html2pdf().from(elementToPrint).set(opt).save();
+                // Create temporary link to trigger download
+                const link = document.createElement('a');
+                link.href = pdfPath;
+                link.download = pdfPath.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             });
         });
     </script>
